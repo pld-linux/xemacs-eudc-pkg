@@ -9,13 +9,14 @@ Group:		Applications/Editors/Emacs
 Source0:	ftp://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
 # Source0-md5:	1c725e74136dc51c02f4e7b7642140a7
 Patch0:		%{name}-info.patch
-BuildArch:	noarch
-Conflicts:	xemacs-sumo
+URL:		http://www.xemacs.org/
+BuildRequires:	texinfo
 Requires:	xemacs
-Requires:	xemacs-fsf-compat-pkg
 Requires:	xemacs-base-pkg
 Requires:	xemacs-bbdb-pkg
-URL:		http://www.xemacs.org/
+Requires:	xemacs-fsf-compat-pkg
+Conflicts:	xemacs-sumo
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,6 +55,6 @@ rm -fr $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc lisp/eudc/ChangeLog
-%{_infodir}/*
 %dir %{_datadir}/xemacs-packages/lisp/*
 %{_datadir}/xemacs-packages/lisp/*/*.el*
+%{_infodir}/*.info*
