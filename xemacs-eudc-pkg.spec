@@ -17,13 +17,11 @@ Requires:	xemacs-base-pkg
 Requires:	xemacs-bbdb-pkg
 Prereq:		/usr/sbin/fix-info-dir
 URL:		http://www.xemacs.org/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 
-
 %description -l pl 
-
 
 %prep
 %setup -q -c
