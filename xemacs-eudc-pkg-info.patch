@@ -1,0 +1,28 @@
+diff -Nur xemacs-eudc-pkg-1.31/man/eudc/eudc.texi xemacs-eudc-pkg-1.31.new/man/eudc/eudc.texi
+--- xemacs-eudc-pkg-1.31/man/eudc/eudc.texi	Sat Oct 30 15:46:20 1999
++++ xemacs-eudc-pkg-1.31.new/man/eudc/eudc.texi	Sun Mar 26 15:04:15 2000
+@@ -1,6 +1,6 @@
+ \input texinfo.tex
+ @c %**start of header
+-@setfilename eudc.info
++@setfilename ../../info/eudc.info
+ @settitle Emacs Unified Directory Client (EUDC) Manual
+ @iftex
+ @afourpaper
+@@ -10,10 +10,15 @@
+ @footnotestyle end
+ 
+ @ifinfo
++@format
++@dircategory XEmacs Editor:
+ @direntry
+-* EUDC::   A client for directory servers (LDAP, PH)
++* EUDC: (eudc).                         A client for directory servers (LDAP, PH)
+ @end direntry
++@end format
++@end ifinfo
+ 
++@ifinfo
+ This file documents EUDC v1.29
+ 
+ EUDC is part of XEmacs.
