@@ -15,7 +15,6 @@ Requires:	xemacs
 Requires:	xemacs-fsf-compat-pkg
 Requires:	xemacs-base-pkg
 Requires:	xemacs-bbdb-pkg
-Prereq:		/usr/sbin/fix-info-dir
 URL:		http://www.xemacs.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -45,10 +44,10 @@ gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info* \
 rm -fr $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %postun
-%{_sbindir}/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+[ -x /usr/sbin/fix-info-dir ] && /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
 
 %files
 %defattr(644,root,root,755)
