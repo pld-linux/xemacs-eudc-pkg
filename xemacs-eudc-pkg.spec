@@ -1,14 +1,15 @@
 Summary:	Emacs Unified Directory Client (LDAP, PH)
-Summary(pl):	Emacs Unified Directory Client (LDAP, PH)
+Summary(pl):	Klient us³ug katalogowych (LDAP, PH) dla Emacsa
 Name:		xemacs-eudc-pkg
 %define 	srcname	eudc
 Version:	1.34
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
+Group(de):	Applikationen/Editors/Emacs
 Group(pl):	Aplikacje/Edytory/Emacs
 Source0:	ftp://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
-Patch0:		xemacs-eudc-pkg-info.patch
+Patch0:		%{name}-info.patch
 BuildArch:	noarch
 Conflicts:	xemacs-sumo
 Requires:	xemacs
@@ -19,8 +20,10 @@ URL:		http://www.xemacs.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Emacs Unified Directory Client (LDAP, PH).
 
 %description -l pl 
+Klient us³ug katalogowych (LDAP, PH) dla Emacsa.
 
 %prep
 %setup -q -c
@@ -37,8 +40,7 @@ cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 mv -f  $RPM_BUILD_ROOT%{_datadir}/xemacs-packages/info/*.info* $RPM_BUILD_ROOT%{_infodir}
 rm -fr $RPM_BUILD_ROOT%{_datadir}/xemacs-packages/info
 
-gzip -9nf $RPM_BUILD_ROOT%{_infodir}/*.info* \
-	lisp/eudc/ChangeLog 
+gzip -9nf lisp/eudc/ChangeLog 
 
 %clean
 rm -fr $RPM_BUILD_ROOT
