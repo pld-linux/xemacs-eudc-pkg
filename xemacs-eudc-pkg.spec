@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Emacs Unified Directory Client (LDAP, PH).
 
-%description -l pl 
+%description -l pl
 Klient us³ug katalogowych (LDAP, PH) dla Emacsa.
 
 %prep
@@ -38,7 +38,7 @@ cp -a * $RPM_BUILD_ROOT%{_datadir}/xemacs-packages
 mv -f  $RPM_BUILD_ROOT%{_datadir}/xemacs-packages/info/*.info* $RPM_BUILD_ROOT%{_infodir}
 rm -fr $RPM_BUILD_ROOT%{_datadir}/xemacs-packages/info
 
-gzip -9nf lisp/eudc/ChangeLog 
+gzip -9nf lisp/eudc/ChangeLog
 
 %clean
 rm -fr $RPM_BUILD_ROOT
@@ -51,7 +51,7 @@ rm -fr $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc lisp/eudc/ChangeLog.gz 
+%doc lisp/eudc/ChangeLog.gz
 %{_infodir}/*
 %dir %{_datadir}/xemacs-packages/lisp/*
 %{_datadir}/xemacs-packages/lisp/*/*.elc
