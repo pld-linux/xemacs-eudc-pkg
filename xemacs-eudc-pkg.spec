@@ -30,7 +30,8 @@ Klient us³ug katalogowych (LDAP, PH) dla Emacsa.
 %patch0 -p1
 
 %build
-(cd man/eudc; awk '/^\\input texinfo/ {print FILENAME}' * | xargs makeinfo)
+cd man/eudc
+awk '/^\\input texinfo/ {print FILENAME}' * | xargs makeinfo
 
 %install
 rm -rf $RPM_BUILD_ROOT
