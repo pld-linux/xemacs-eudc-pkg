@@ -2,7 +2,7 @@ Summary:	Emacs Unified Directory Client (LDAP, PH)
 Summary(pl):	Emacs Unified Directory Client (LDAP, PH)
 Name:		xemacs-eudc-pkg
 %define 	srcname	eudc
-Version:	1.32
+Version:	1.34
 Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
