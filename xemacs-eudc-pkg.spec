@@ -1,5 +1,5 @@
 Summary:	Emacs Unified Directory Client (LDAP, PH)
-Summary(pl.UTF-8):   Klient usług katalogowych (LDAP, PH) dla Emacsa
+Summary(pl.UTF-8):	Klient usług katalogowych (LDAP, PH) dla Emacsa
 Name:		xemacs-eudc-pkg
 %define 	srcname	eudc
 Version:	1.39
