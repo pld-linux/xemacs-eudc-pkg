@@ -6,7 +6,7 @@ Version:	1.39
 Release:	2
 License:	GPL
 Group:		Applications/Editors/Emacs
-Source0:	ftp://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
+Source0:	http://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
 # Source0-md5:	1c725e74136dc51c02f4e7b7642140a7
 Patch0:		%{name}-info.patch
 URL:		http://www.xemacs.org/
