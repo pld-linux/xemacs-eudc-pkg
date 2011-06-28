@@ -2,12 +2,12 @@ Summary:	Emacs Unified Directory Client (LDAP, PH)
 Summary(pl.UTF-8):	Klient usług katalogowych (LDAP, PH) dla Emacsa
 Name:		xemacs-eudc-pkg
 %define 	srcname	eudc
-Version:	1.39
-Release:	2
+Version:	1.40
+Release:	1
 License:	GPL
 Group:		Applications/Editors/Emacs
 Source0:	http://ftp.xemacs.org/xemacs/packages/%{srcname}-%{version}-pkg.tar.gz
-# Source0-md5:	1c725e74136dc51c02f4e7b7642140a7
+# Source0-md5:	a317b05180614b108479b72df63ce3d0
 Patch0:		%{name}-info.patch
 URL:		http://www.xemacs.org/
 BuildRequires:	texinfo
